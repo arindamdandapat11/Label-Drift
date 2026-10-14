@@ -28,7 +28,7 @@ Same classification objective. Six differently worded prompts. One local open-so
 
 ---
 
-## `//` ⚡ Powered By
+## ⚡ Powered By
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
@@ -41,7 +41,7 @@ Same classification objective. Six differently worded prompts. One local open-so
 
 ---
 
-## `//` 🗂️ Project Structure
+## 🗂️ Project Structure
 
 ```text
 prompt-wording-study/
