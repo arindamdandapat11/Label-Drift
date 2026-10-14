@@ -16,7 +16,7 @@ Same classification objective. Six differently worded prompts. One local open-so
 
 ---
 
-## `01` // 🎯 Mission Parameters
+## `01` 🎯 Mission Parameters
 
 | Parameter | Value |
 | --- | --- |
@@ -64,7 +64,7 @@ prompt-wording-study/
 
 ---
 
-## `02` // 🚀 Boot Sequence
+## `02` 🚀 Boot Sequence
 
 ```powershell
 python -m venv .venv
@@ -76,7 +76,7 @@ pip install -r requirements.txt
 
 ---
 
-## `03` // 📂 Load Your Dataset
+## `03` 📂 Load Your Dataset
 
 Feed the system a CSV with a text column:
 
@@ -105,7 +105,7 @@ A tiny sentiment sample lives in `data/sample.csv`, so you can run the full pipe
 
 ---
 
-## `04` // ▶️ Execute
+## `04` ▶️ Execute
 
 ```powershell
 python -m src.run_experiment --config config.yaml --output results
@@ -113,7 +113,7 @@ python -m src.run_experiment --config config.yaml --output results
 
 ---
 
-## `05` // 🖥️ Launch the Interface
+## `05` 🖥️ Launch the Interface
 
 Spin up the local CSV workbench:
 
@@ -135,7 +135,7 @@ The workbench compares every row across the prompts in `config.yaml` and deliver
 
 ---
 
-## `06` // 📡 Telemetry Output
+## `06` 📡 Telemetry Output
 
 | File | Signal |
 | --- | --- |
@@ -156,7 +156,7 @@ flip_rate  > 0   ->  wording changed at least some decisions,
 
 ---
 
-## `07` // 🛠️ Configuration Notes
+## `07` 🛠️ Configuration Notes
 
 - 🧊 **Deterministic by design.** Decoding is greedy (`temperature: 0.0`), so sampling noise is not the cause of flips.
 - 🔄 **Swap the engine.** Change `model.name` to any other local Transformers checkpoint, for example `google/flan-t5-small` or `Qwen/Qwen2.5-0.5B-Instruct`.
