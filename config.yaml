@@ -1,0 +1,80 @@
+# Same objective for every prompt: severity of a campus complaint.
+# Labels come from the assignment gold column.
+
+model:
+  name: google/flan-t5-base
+  max_new_tokens: 16
+  temperature: 0.0
+
+data:
+  path: data/complaints_dataset.csv
+  text_column: complaint
+  gold_column: gold
+  task_description: severity of a campus complaint
+
+labels:
+  - high
+  - medium
+  - low
+
+prompts:
+  - id: direct
+    description: Short instruction, no extra framing
+    template: |
+      For this task, classify the text into one of these categories: {labels}.
+      Task: {task}
+      Reply with only the label.
+
+      Text: {text}
+      Label:
+
+  - id: expert_role
+    description: Same task, expert-annotator persona
+    template: |
+      You are an expert annotator. For this task, assign the text
+      exactly one category from this list: {labels}.
+      Task: {task}
+      Do not explain. Output only the class name.
+
+      Text:
+      {text}
+
+      Class:
+
+  - id: question
+    description: Same task phrased as a question
+    template: |
+      Which category best fits this text for the task below?
+      Task: {task}
+      Allowed categories: {labels}
+      Answer with a single word from that list.
+
+      "{text}"
+
+      Answer:
+
+  - id: json
+    description: Same task with a strict JSON schema
+    template: |
+      Task: {task}
+      Classify the following text into exactly one category: {labels}.
+      Return JSON only in this form: {{"label": "<one allowed label>"}}
+
+      Text: {text}
+
+  - id: definitions
+    description: Task-first wording with category context
+    template: |
+      Use the task description to choose the most accurate category.
+      Task: {task}
+      Categories: {labels}
+      Output only the label.
+
+      Text: {text}
+      Label:
+
+  - id: terse
+    description: Minimal wording, same decision
+    template: |
+      {task} | {labels}
+      {text}

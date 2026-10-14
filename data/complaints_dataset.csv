@@ -1,0 +1,101 @@
+id,category,complaint,gold,borderline
+1,Hostel,The hostel has had no water since yesterday morning.,High,N
+2,Hostel,There is a short circuit sparking near the room 214 switchboard.,High,N
+3,Hostel,The latch of my room window is broken and I cannot lock it properly.,Medium,Y
+4,Hostel,Geyser in block C has not worked for a week and it is getting cold.,Medium,Y
+5,Hostel,My roommate plays loud music after midnight and I cannot sleep.,Medium,Y
+6,Hostel,The washing machine on the ground floor is out of order.,Low,N
+7,Hostel,My bed mattress is old and a bit uncomfortable.,Low,N
+8,Hostel,Fire extinguishers in the corridor are empty and past their expiry date.,High,N
+9,Hostel,Rats have been seen in the corridor near the hostel kitchen.,Medium,Y
+10,Hostel,Warden does not allow guests in the common room even in the afternoon.,Low,N
+11,Mess,The mess food is cold most days.,Low,N
+12,Mess,Found a cockroach in the dal served at dinner today.,Medium,Y
+13,Mess,Many students had stomach pain and vomiting after last night's mess dinner.,High,N
+14,Mess,"The mess menu is repetitive, we get the same paneer dish every day.",Low,N
+15,Mess,The canteen charges more than the printed menu price.,Low,N
+16,Mess,Drinking water near the mess looks yellow and smells bad.,High,Y
+17,Mess,Mess closes at 8:45 pm but the evening batch finishes class at 8:30.,Medium,Y
+18,Mess,Chapatis are undercooked and hard to eat.,Low,N
+19,Mess,Canteen staff are rude whenever we ask for the correct change.,Low,N
+20,Mess,Expired packaged juices are being sold in the campus shop.,Medium,Y
+21,Academics,The syllabus for the ML course has not been shared even after four weeks.,Medium,N
+22,Academics,Our data structures professor has not taken a class for two weeks.,Medium,N
+23,Academics,The timetable for next week is not uploaded yet.,Low,N
+24,Academics,Two of our classes are scheduled at the same time on Thursday.,Medium,N
+25,Academics,Lecture slides move too fast and are hard to follow.,Low,N
+26,Academics,The assignment deadline was moved earlier without notice and many of us could not submit.,Medium,Y
+27,Academics,The elective I was assigned is not what I applied for and the add/drop window closes tomorrow.,High,Y
+28,Academics,The AC in room B-12 does not work.,Low,N
+29,Academics,"Portal shows my attendance as 62% though I attended almost every class, and the shortage list comes out tomorrow.",High,Y
+30,Academics,The teaching assistant is not replying to doubts on the course forum.,Low,N
+31,Exams,Exam hall fans were not working during the ML midterm.,Medium,Y
+32,Exams,I was denied exam entry because my attendance was wrongly recorded.,High,N
+33,Exams,The question paper had questions from outside the syllabus.,Medium,N
+34,Exams,My hall ticket is not generated and my exam is in two days.,High,N
+35,Exams,The invigilator was talking loudly on the phone during the paper.,Low,N
+36,Exams,My marks for the algorithms quiz are missing from the portal.,Medium,Y
+37,Exams,My answer sheet had missing pages and I noticed it only after 20 minutes.,Medium,Y
+38,Exams,Revaluation result is delayed by two months and I need it for a scholarship form due next week.,High,Y
+39,Exams,The exam schedule has papers on back to back days with no gap.,Low,Y
+40,Exams,My result shows another student's marks against my roll number.,Medium,Y
+41,Fees,My semester fee was deducted twice and I have not got a refund.,High,N
+42,Fees,The scholarship amount has been delayed for three months.,High,N
+43,Fees,The fee receipt cannot be downloaded from the portal.,Low,Y
+44,Fees,I was charged a late fine even though I paid before the due date and have proof.,Medium,Y
+45,Fees,My bank details were rejected on the scholarship form with no reason given and the deadline is in 3 days.,High,Y
+46,Fees,The hostel fee amount is different from what we were told at admission.,Medium,N
+47,Fees,The fee payment portal is very slow during peak hours.,Low,N
+48,Fees,My caution deposit has not been returned even after six months.,Medium,Y
+49,Fees,There is no instalment option and because of a family emergency I may have to drop the semester.,High,Y
+50,Fees,The fee structure PDF has a spelling mistake in the department name.,Low,N
+51,Library_IT,Wi-Fi in the library is slow in the evenings.,Low,N
+52,Library_IT,Wi-Fi has been down in all hostel blocks for three days and online assignments are pending.,Medium,Y
+53,Library_IT,My student email account is locked and I cannot open the exam portal.,High,Y
+54,Library_IT,"The library closes at 6 pm, it should stay open till 10.",Low,N
+55,Library_IT,Books recommended for the ML course are not available in the library.,Low,N
+56,Library_IT,The library AC is too cold to sit in.,Low,N
+57,Library_IT,The portal shows an error every time I try to view my results.,Medium,N
+58,Library_IT,The printer in the library is out of ink.,Low,N
+59,Library_IT,Student phone numbers and addresses are visible to everyone on the portal list.,High,Y
+60,Library_IT,The Moodle site crashes during quiz submission time.,Medium,Y
+61,Labs,Lab computers keep freezing and I lost my unsaved work twice.,Medium,Y
+62,Labs,A chemical was spilled in the lab and nobody cleaned it for hours.,High,Y
+63,Labs,GPU lab time is limited to 2 hours per student which is not enough for our project.,Medium,Y
+64,Labs,The projector in room B-12 has a dim display.,Low,N
+65,Labs,The lab manual has wrong instructions for experiment 4.,Medium,N
+66,Labs,Too many students share one oscilloscope in the electronics lab.,Medium,Y
+67,Labs,Mouse and keyboard are missing from lab PC number 14.,Low,N
+68,Labs,The Python version in the lab is outdated and we cannot install packages.,Medium,N
+69,Transport,The college bus driver was overspeeding and driving recklessly on the highway.,High,N
+70,Transport,The bus arrives 20 minutes late every day.,Low,N
+71,Transport,The bus broke down midway and students were stranded after 9 pm.,High,Y
+72,Transport,Several seats in the college bus are torn.,Low,N
+73,Transport,There is no bus on Saturdays for hostel students going to the railway station.,Medium,N
+74,Transport,The bus route now skips my area so I have to take an auto.,Medium,Y
+75,Transport,The bus conductor misbehaved with a girl student.,Medium,Y
+76,Safety,A group of stray dogs roams near the girls hostel gate at night.,Medium,Y
+77,Safety,Seniors are ragging juniors at night in block A.,High,N
+78,Safety,A faculty member made inappropriate comments about my appearance.,High,N
+79,Safety,Street lights near the back gate of the campus are not working.,Medium,N
+80,Safety,Outsiders are entering the hostel without registering at the gate.,High,Y
+81,Safety,My laptop was stolen from my room and the door lock was already broken.,High,N
+82,Safety,The CCTV camera in the parking area is not working.,Medium,N
+83,Safety,Bike parking space is always overcrowded.,Low,N
+84,Safety,The gate guard checks ID cards rudely.,Low,N
+85,Safety,A non-student keeps following girls outside the campus gate.,High,N
+86,Safety,The staircase on the 3rd floor has no railing.,High,Y
+87,Safety,I have been feeling hopeless and stressed and there has been no counsellor available for two weeks.,High,N
+88,Safety,The counselling centre is only open 10 to 4 which clashes with classes.,Low,Y
+89,Admin,There is no doctor in the medical room on weekends.,Medium,Y
+90,Admin,A student with high fever waited an hour for the ambulance.,High,N
+91,Admin,My bonafide certificate has been pending for 2 weeks and I need it for a visa appointment in 3 days.,High,Y
+92,Admin,The placement cell did not share eligibility criteria before the company drive.,Medium,N
+93,Admin,The resume portal deadline for the placement drive was extended without any notice.,Low,Y
+94,Admin,My transcript request has been pending for a month.,Medium,Y
+95,Admin,The water cooler on the 2nd floor does not give cold water.,Low,N
+96,Admin,The washrooms in the academic block have not been cleaned for days.,Medium,Y
+97,Admin,Garbage has not been collected near the hostel for a week and it smells bad.,Medium,N
+98,Admin,The sports ground is waterlogged after rain and cannot be used.,Low,N
+99,Admin,The notice board has outdated posters.,Low,N
+100,Admin,My ID card has not been issued after 3 months so I cannot enter the library or labs.,Medium,Y

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f4ee">
+  <title>Prompt Study | CSV analysis</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+  <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="wordmark" href="/" aria-label="Prompt Study home"><span class="mark">P</span> PROMPT STUDY</a>
+    <div class="topbar-meta"><span class="local-indicator"></span> LOCAL ANALYSIS <span class="meta-divider"></span> {{ model_name }}</div>
+  </header>
+
+  <main class="workspace">
+    <section class="intro">
+      <p class="eyebrow">CSV WORKBENCH <span> / </span> PROMPT SENSITIVITY</p>
+      <h1>Same data.<br><em>Different wording.</em></h1>
+      <p class="intro-copy">Drop in a CSV to compare how prompt wording changes classification across your dataset.</p>
+    </section>
+
+    <div class="work-grid">
+      <section class="setup-panel" aria-labelledby="setup-title">
+        <div class="panel-heading">
+          <div><span class="step-index">01</span><h2 id="setup-title">Set up your run</h2></div>
+          <span class="model-chip"><span class="local-indicator"></span> LOCAL MODEL</span>
+        </div>
+
+        <label class="drop-zone" id="drop-zone" for="csv-file">
+          <input id="csv-file" type="file" accept=".csv,text/csv">
+          <span class="upload-icon" aria-hidden="true">↑</span>
+          <span class="drop-title" id="drop-title">Drop your CSV here</span>
+          <span class="drop-subtitle" id="drop-subtitle">or <span class="browse-link">browse files</span> · up to 50 MB</span>
+        </label>
+
+        <div class="file-meta" id="file-meta" hidden>
+          <span class="file-mark">CSV</span><span id="file-name"></span><span id="file-size"></span>
+          <button class="remove-file" id="remove-file" type="button" aria-label="Remove file" title="Remove file">×</button>
+        </div>
+
+        <div class="field-grid" id="field-grid" hidden>
+          <label class="field-label" for="text-column">TEXT COLUMN <span>Required</span>
+            <select id="text-column"></select>
+          </label>
+          <label class="field-label" for="gold-column">GOLD LABEL <span>Optional</span>
+            <select id="gold-column"></select>
+          </label>
+          <label class="field-label task-field" for="task-description">CLASSIFICATION TASK <span>Describe the decision and label meanings</span>
+            <textarea id="task-description" rows="2" placeholder="e.g. sentiment of a product review; positive means satisfied, negative means dissatisfied">{{ config_task }}</textarea>
+          </label>
+          <label class="field-label labels-field" for="labels">CLASS LABELS <span>Comma separated</span>
+            <input id="labels" type="text" value="{{ labels }}" placeholder="positive, negative, neutral">
+          </label>
+        </div>
+
+        <div class="csv-preview" id="csv-preview" hidden>
+          <div class="preview-heading"><span>DATA PREVIEW</span><span>FIRST 5 ROWS</span></div>
+          <div class="preview-table-wrap" id="preview-table-wrap"></div>
+        </div>
+
+        <div class="prompt-note" id="prompt-note" hidden>
+          <div class="note-icon">↗</div>
+          <div><strong>{{ prompts|length }} prompt variants</strong><span>Each row is classified with the same {{ prompts|length }} phrasings.</span></div>
+        </div>
+
+        <div class="form-error" id="form-error" role="alert" hidden></div>
+        <button class="run-button" id="run-button" type="button" disabled>
+          <span>Run analysis</span><span class="button-arrow">→</span>
+        </button>
+        <p class="privacy-note">Your file stays on this machine. Nothing is uploaded to a third party.</p>
+      </section>
+
+      <section class="results-panel" aria-labelledby="results-title">
+        <div class="panel-heading results-heading">
+          <div><span class="step-index">02</span><h2 id="results-title">Analysis</h2></div>
+          <span class="result-count" id="result-count">AWAITING CSV</span>
+        </div>
+
+        <div class="empty-state" id="empty-state">
+          <div class="empty-graphic" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+          <h3>Your results will land here.</h3>
+          <p>Choose a CSV and text column to see prompt agreement, label shifts, and row-level predictions.</p>
+        </div>
+
+        <div class="loading-state" id="loading-state" hidden>
+          <div class="loader" aria-hidden="true"></div>
+          <h3 id="loading-title">Preparing analysis</h3>
+          <p id="loading-copy">The first run may take a few minutes while the model loads.</p>
+          <div class="loading-track"><span></span></div>
+        </div>
+
+        <div class="analysis-results" id="analysis-results" hidden>
+          <div class="metrics-grid" id="metrics-grid"></div>
+          <div class="result-toolbar">
+            <div class="result-tabs" role="tablist" aria-label="Result views">
+              <button class="result-tab active" type="button" data-view="wide" role="tab" aria-selected="true">Predictions</button>
+              <button class="result-tab" type="button" data-view="disagreements" role="tab" aria-selected="false">Label shifts</button>
+              <button class="result-tab" type="button" data-view="per_prompt" role="tab" aria-selected="false">By prompt</button>
+            </div>
+            <button class="export-button" id="export-button" type="button" title="Download this table as CSV"><span aria-hidden="true">↓</span> EXPORT CSV</button>
+          </div>
+          <div class="table-wrap" id="table-wrap"></div>
+          <p class="table-footnote" id="table-footnote"></p>
+        </div>
+      </section>
+    </div>
+    <footer class="page-footer"><span>Prompt Study</span><span>Local, open-source model · {{ model_name }}</span></footer>
+  </main>
+</body>
+</html>

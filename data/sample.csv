@@ -1,0 +1,16 @@
+id,text,label
+1,"I loved the product. Shipping was fast and support was kind.",positive
+2,"This is the worst purchase I have made this year.",negative
+3,"The package arrived on Tuesday.",neutral
+4,"Yeah, great, another delay. Just what I needed.",negative
+5,"Not bad, not great — it works.",neutral
+6,"Absolutely fantastic quality. Would buy again.",positive
+7,"Customer service hung up on me twice.",negative
+8,"The manual is 12 pages long and includes a warranty card.",neutral
+9,"I wanted to like it, but the battery died in two hours.",negative
+10,"Surprisingly good for the price.",positive
+11,"Fine I guess.",neutral
+12,"Thank you so much! This made my day.",positive
+13,"Do not waste your money.",negative
+14,"The color is blue and the size is medium.",neutral
+15,"It is okay if you have zero other options.",negative
